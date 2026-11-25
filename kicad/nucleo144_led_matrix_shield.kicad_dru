@@ -1,0 +1,21 @@
+(version 1)
+# nucleo144_led_matrix_shield custom rules (KiCad 10). The LAST matching rule wins.
+# Fab minimums live in Board Setup > Constraints (JLCPCB 4-layer standard: 0.15/0.15 mm, via 0.5/0.25 mm).
+
+# --- power: never thinner than 0.3 mm, except a short neck-down into fine-pitch pads
+(rule "power_min_width"
+  (condition "A.NetClass == 'Power'")
+  (constraint track_width (min 0.3mm) (opt 0.5mm)))
+(rule "power_neckdown_at_fine_pads"
+  (condition "A.NetClass == 'Power' && A.intersectsCourtyard('U*')")
+  (constraint track_width (min 0.2mm)))
+
+# --- mechanical: copper keeps away from NPTH
+(rule "npth_to_copper"
+  (condition "A.Pad_Type == 'NPTH, mechanical'")
+  (constraint hole_clearance (min 0.4mm)))
+
+# --- In1 is the unbroken GND reference plane: no tracks (In2 carries the row lanes)
+(rule "in1_gnd_plane_no_tracks"
+  (layer "In1.Cu")
+  (constraint disallow track))
