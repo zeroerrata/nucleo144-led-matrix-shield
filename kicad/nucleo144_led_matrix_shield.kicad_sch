@@ -6,11 +6,12 @@
 	(paper "A2")
 	(title_block
 		(title "Nucleo-144 LED matrix shield")
-		(date "2026-11-02")
-		(rev "3")
+		(date "${RELEASE_DATE}")
+		(rev "${REVISION}")
 		(comment 1 "31 x 60 = 1860 red 0402 LEDs at 1.75 mm pitch, 45-degree placement")
 		(comment 2 "Rows: 4x STP16CP05 constant-current sinks; columns: 31x AO3401A high-side switches, 4x 74AHCT138")
 		(comment 3 "Host: NUCLEO-F429ZI / F767ZI (Nucleo-144, ST morpho CN11/CN12)")
+		(comment 4 "ZE-03  ${RELEASE_TAG} ${GIT_HASH}")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_02x35_Odd_Even"
@@ -4053,7 +4054,7 @@
 				)
 			)
 		)
-		(property "MPN" "2.54mm 2x35 female header, 8.5 mm"
+		(property "MPN" "SSQ-135-01-T-D"
 			(at 50.8 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -4064,7 +4065,18 @@
 				)
 			)
 		)
-		(property "Manufacturer" "generic"
+		(property "Manufacturer" "Samtec"
+			(at 50.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7088697"
 			(at 50.8 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -5512,7 +5524,7 @@
 				)
 			)
 		)
-		(property "MPN" "2.54mm 2x35 female header, 8.5 mm"
+		(property "MPN" "SSQ-135-01-T-D"
 			(at 127 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -5523,7 +5535,18 @@
 				)
 			)
 		)
-		(property "Manufacturer" "generic"
+		(property "Manufacturer" "Samtec"
+			(at 127 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7088697"
 			(at 127 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -18928,7 +18951,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL21A226MAQNNNE"
+		(property "MPN" "CL21A226MAYNNNE"
 			(at 25.4 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -18950,7 +18973,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C45783"
+		(property "LCSC" "C602037"
 			(at 25.4 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -19196,7 +19219,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL21A226MAQNNNE"
+		(property "MPN" "CL21A226MAYNNNE"
 			(at 38.1 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -19218,7 +19241,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C45783"
+		(property "LCSC" "C602037"
 			(at 38.1 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -19464,7 +19487,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL21A226MAQNNNE"
+		(property "MPN" "CL21A226MAYNNNE"
 			(at 50.8 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -19486,7 +19509,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C45783"
+		(property "LCSC" "C602037"
 			(at 50.8 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -19732,7 +19755,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL21A226MAQNNNE"
+		(property "MPN" "CL21A226MAYNNNE"
 			(at 63.5 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -19754,7 +19777,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C45783"
+		(property "LCSC" "C602037"
 			(at 63.5 223.52 0)
 			(hide yes)
 			(show_name no)

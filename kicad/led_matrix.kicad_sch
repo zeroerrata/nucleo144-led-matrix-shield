@@ -6,11 +6,12 @@
 	(paper "A2")
 	(title_block
 		(title "LED matrix 31 x 60")
-		(date "2026-11-02")
-		(rev "3")
+		(date "${RELEASE_DATE}")
+		(rev "${REVISION}")
 		(comment 1 "31 x 60 = 1860 red 0402 LEDs at 1.75 mm pitch, 45-degree placement")
 		(comment 2 "Rows: 4x STP16CP05 constant-current sinks; columns: 31x AO3401A high-side switches, 4x 74AHCT138")
 		(comment 3 "Host: NUCLEO-F429ZI / F767ZI (Nucleo-144, ST morpho CN11/CN12)")
+		(comment 4 "ZE-03  ${RELEASE_TAG} ${GIT_HASH}")
 	)
 	(lib_symbols
 		(symbol "power:+5V"

@@ -10,7 +10,7 @@
 <p align="center"><b>A full-size Nucleo-144 shield with a 31 x 60 matrix of red 0402 LEDs at 45 degrees, driven by constant-current sinks.</b></p>
 
 <p align="center">
-  <img alt="rev 3" src="https://img.shields.io/badge/release-rev%203-1f6feb">
+  <img alt="rev 4" src="https://img.shields.io/badge/release-rev%204-1f6feb">
   <img alt="KiCad 10" src="https://img.shields.io/badge/KiCad-10-314cb6">
   <img alt="CERN-OHL-P-2.0" src="https://img.shields.io/badge/licence-CERN--OHL--P--2.0-2ea44f">
   <img alt="4 layers" src="https://img.shields.io/badge/layers-4-555">
@@ -40,7 +40,7 @@ A dense 4-layer board: rows on the top layer, a solid ground plane, column lanes
 | Board | 70.0 x 133.4 mm, 4 copper layers, 1.6 mm |
 | Finish | ENIG |
 | Parts | 1927 |
-| Release | rev 3, 2026-11-20 |
+| Release | rev 4, 2026-11-27 |
 | LED matrix | 31 x 60 = 1860, red, 0402, 1.75 mm pitch |
 | Host | STM32 Nucleo-144 (ST morpho CN11 / CN12) |
 | Supply | +5 V and +3.3 V from the Nucleo |
@@ -65,6 +65,7 @@ A dense 4-layer board: rows on the top layer, a solid ground plane, column lanes
 | [`docs/`](docs) | [schematic.pdf](docs/schematic.pdf), [board_layers.pdf](docs/board_layers.pdf) |
 | [`fabrication/`](fabrication) | Gerber and drill files (zip), bill of materials, pick-and-place |
 | [`images/`](images) | renders and copper layer pictures |
+| [`analysis/`](analysis) | simulation and analysis results: bringup, dfm, retpath |
 
 ## Verification
 
@@ -81,13 +82,13 @@ A dense 4-layer board: rows on the top layer, a solid ground plane, column lanes
 
 Found by the design review of this release; boards built from these files carry them:
 
-- Crosstalk: the bottom drivers' clock couples a 0.73 V spike into their output-enable line (simulated). It stays below the logic threshold, so at worst a nanosecond dimming glitch; firmware avoids it by shifting column data while the outputs are off.
-- Reflow balance: six 0402 resistors on the ground pour (R2-R8) heat unevenly and may tombstone. Use a reflow profile with a 60-90 s soak at 150-180 C and inspect them.
-- Parts: the morpho sockets are given as a description, not an orderable part, and the bulk capacitors were obsolete at release; order equivalent 2 x 35 female headers and current capacitors.
+- Crosstalk: the bottom drivers' clock couples a 0.73 V spike into their output-enable line (simulated). It stays below the logic threshold, so at worst a nanosecond dimming glitch; firmware avoids it by shifting column data while the outputs are off. Rev 4 re-routes these lines; the crosstalk check passes.
+- Reflow balance: from rev 4 the small ground pads connect through thermal reliefs; use a profile with a 60-90 s soak at 150-180 C and inspect the 0402 resistors.
+- Parts: rev 4 orders Samtec SSQ-135-01-T-D morpho sockets (second source Sullins PPPC352LFBN-RC) and current 22 uF capacitors; the STP16CP05TTR row drivers had little stock in 2026: buy the drivers before ordering boards.
 
 ## Notes
 
-- The renders show the ZeroErrata house look (black solder mask); the released fabrication package specifies the fab's standard green mask. Choose the mask colour when you order.
+- The renders show the ZeroErrata house look; from rev 4 the fabrication package specifies it too: matte black solder mask, white silkscreen, ENIG.
 - The firmware (column scan) is not part of this repository.
 
 ## Licence
