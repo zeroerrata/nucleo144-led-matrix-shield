@@ -16,7 +16,14 @@
   <img alt="4 layers" src="https://img.shields.io/badge/layers-4-555">
 </p>
 
-<p align="center"><img src="images/renders/hero_iso_1200.webp" alt="render" width="820"></p>
+<p align="center">
+  <a href="images/renders/hero_iso.png"><img src="images/renders/hero_iso_1200.webp" alt="Nucleo-144 LED matrix shield: 1860 LEDs: 3D render of the board, isometric view" width="820"></a>
+</p>
+
+<p align="center">
+  <a href="images/renders/top.png"><img src="images/renders/top_1200.webp" alt="Nucleo-144 LED matrix shield: 1860 LEDs: 3D render of the board, top side" width="400"></a>
+  <a href="images/renders/bottom.png"><img src="images/renders/bottom_1200.webp" alt="Nucleo-144 LED matrix shield: 1860 LEDs: 3D render of the board, bottom side" width="400"></a>
+</p>
 
 ## About
 
@@ -53,9 +60,9 @@ A dense 4-layer board: rows on the top layer, a solid ground plane, column lanes
 
 ## Renders
 
-| Top | Bottom | Low |
-|---|---|---|
-| <img src="images/renders/top_1200.webp" width="300"> | <img src="images/renders/bottom_1200.webp" width="300"> | <img src="images/renders/low_1200.webp" width="300"> |
+<p align="center"><img src="images/renders/low_1200.webp" alt="Nucleo-144 LED matrix shield: 1860 LEDs: 3D render of the board, low-angle view" width="600"></p>
+
+Full resolution: [isometric view](images/renders/hero_iso.png), [top side](images/renders/top.png), [bottom side](images/renders/bottom.png), [low-angle view](images/renders/low.png).
 
 ## Files
 
